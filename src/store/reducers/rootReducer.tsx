@@ -1,8 +1,8 @@
-import projectReducer from "./projectReducer";
 import { combineReducers } from "redux";
+import { tasksReducer } from "./tasksReducer";
 
 const rootReducer = combineReducers({
-  project: projectReducer,
+  tasks: tasksReducer,
 });
 
 export default rootReducer;
