@@ -1,14 +1,15 @@
 import React from "react";
 import { TasksList } from "./components/TasksList";
-import { NewTask } from "./components/NewTask";
+import { NewTask } from "./components/NewTask/NewTask";
+import "./App.scss";
 
 const App: React.FC = () => {
   return (
-    <>
-      <p>to do app</p>
-      <TasksList />
+    <div className="appContent">
+      <h1 className="mainTitle">Todo List</h1>
       <NewTask />
-    </>
+      <TasksList />
+    </div>
   );
 };
 

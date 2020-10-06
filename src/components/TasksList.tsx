@@ -1,20 +1,22 @@
 import React from "react";
 import { useSelector } from "react-redux";
-
-import { Task } from "./Task";
+import { Task } from "./Task/Task";
 
 export const TasksList: React.FC = () => {
   const tasks = useSelector<TasksState, TasksState["tasks"]>((state) => {
-    console.log(state);
     return state.tasks;
   });
 
   return (
     <>
-      <ul>
+      <ul className="tasksList">
         {tasks.length &&
           tasks.map((task, id) => {
-            return <li key={id}>{<Task task={task} />}</li>;
+            return (
+              <li key={id} className="task">
+                {<Task task={task} />}
+              </li>
+            );
           })}
       </ul>
     </>

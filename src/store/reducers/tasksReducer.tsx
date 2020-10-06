@@ -1,8 +1,7 @@
 const initialState = {
   tasks: [
-    { title: "newTask", description: "newtask desc", status: false },
-    { title: "oldTask", description: "oldtask desc", status: true },
-    { title: "bla", description: "blabla", status: true },
+    { title: "New project", description: "Create new project", status: false },
+    { title: "Styling", description: "Style this app", status: false },
   ],
 };
 
@@ -22,6 +21,7 @@ export const tasksReducer = (
         if (action.payload === el) {
           newState.tasks[id].status = !el.status;
         }
+        return newState;
       });
       return { ...state, tasks: [...newState.tasks] };
     case "DELETE_TASK":
