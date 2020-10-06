@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { deleteTask, toggleTask } from "../../store/actions/actions";
+import { deleteTask, toggleTask } from "../store/actions/actions";
 
 export const Task: React.FC<{ task: Task }> = ({ task }) => {
   const { description, title, status } = task;

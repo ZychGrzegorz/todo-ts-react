@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addTask } from "../../store/actions/actions";
+import { addTask } from "../store/actions/actions";
 
 const defaultTask: Task = {
   title: "",

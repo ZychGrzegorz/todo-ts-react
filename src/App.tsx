@@ -1,6 +1,6 @@
 import React from "react";
 import { TasksList } from "./components/TasksList";
-import { NewTask } from "./components/NewTask/NewTask";
+import { NewTask } from "./components/NewTask";
 import "./App.scss";
 
 const App: React.FC = () => {
