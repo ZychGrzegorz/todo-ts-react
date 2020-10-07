@@ -30,6 +30,19 @@ export const NewTask = () => {
     <>
       <form className="form" action="" onSubmit={(e) => onAddTask(e)}>
         <div className="lineInForm">
+          <label htmlFor="addTitle" className="formLblTitle formLbl">
+            Title:{" "}
+          </label>
+          <input
+            value={task.title}
+            className="formInput"
+            type="text"
+            name=""
+            id="addTitle"
+            onChange={(e) => onFormChange("title", e.target.value)}
+          />
+        </div>
+        <div className="lineInForm">
           <label
             htmlFor="addDescription"
             className="formLblDescription formLbl"
@@ -45,19 +58,7 @@ export const NewTask = () => {
             onChange={(e) => onFormChange("description", e.target.value)}
           />
         </div>
-        <div className="lineInForm">
-          <label htmlFor="addTitle" className="formLblTitle formLbl">
-            Title:{" "}
-          </label>
-          <input
-            value={task.title}
-            className="formInput"
-            type="text"
-            name=""
-            id="addTitle"
-            onChange={(e) => onFormChange("title", e.target.value)}
-          />
-        </div>
+
         <div className="lineInForm">
           <input type="submit" value="New Task" className="btnSubmit btn" />
         </div>
