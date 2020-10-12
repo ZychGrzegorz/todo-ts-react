@@ -11,7 +11,7 @@ const defaultTask: Task = {
 export const NewTask = () => {
   const [task, setTask] = useState(defaultTask);
 
-  //<P extends keyof Task> znaczy to ze P przyjmuje klucze Task
+ 
   const onFormChange = <P extends keyof Task>(prop: P, value: Task[P]) => {
     setTask({ ...task, [prop]: value });
   };
